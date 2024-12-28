@@ -7646,10 +7646,20 @@ proc ::packmol::show_packmol_input {} {
 		append show_str $pbc_str_info
 	}
 
-	set res_res_moleculelist_unique [lsort -unique $res_moleculelist]
-	set res_res_moleculelist_unique_len [llength $res_res_moleculelist_unique]
-	set res_moleculelist_len [llength $res_moleculelist]
+#	set res_res_moleculelist_unique [lsort -unique $res_moleculelist]
+	set res_res_moleculelist_unique {}
+        set res_moleculelist_len [llength $res_moleculelist]
+        set res_moleculelist_num 0
+        while {$res_moleculelist_num < $res_moleculelist_len} {
+                set res_moleculelist_each [lindex $res_moleculelist $res_moleculelist_num]
+                if {$res_moleculelist_each in $res_res_moleculelist_unique} {
+		} else {
+                        lappend res_res_moleculelist_unique $res_moleculelist_each
+                }
+                incr res_moleculelist_num
+        }
 
+	set res_res_moleculelist_unique_len [llength $res_res_moleculelist_unique]
 	set res_unique_number 0
 	while {$res_unique_number<$res_res_moleculelist_unique_len} {
 		set res_unique_number_id [lindex $res_res_moleculelist_unique $res_unique_number]
@@ -8272,10 +8282,20 @@ proc ::packmol::generate_output {} {
 		puts $f $pbc_str_info
         }
 
-	set res_res_moleculelist_unique [lsort -unique $res_moleculelist]
-        set res_res_moleculelist_unique_len [llength $res_res_moleculelist_unique]
+#	set res_res_moleculelist_unique [lsort -unique $res_moleculelist]
+	set res_res_moleculelist_unique {}
 	set res_moleculelist_len [llength $res_moleculelist]
+	set res_moleculelist_num 0
+	while {$res_moleculelist_num < $res_moleculelist_len} {
+		set res_moleculelist_each [lindex $res_moleculelist $res_moleculelist_num]
+		if {$res_moleculelist_each in $res_res_moleculelist_unique} {
+		} else {
+			lappend res_res_moleculelist_unique $res_moleculelist_each
+		}
+		incr res_moleculelist_num
+	}
 
+        set res_res_moleculelist_unique_len [llength $res_res_moleculelist_unique]
 	set res_unique_number 0
         while {$res_unique_number<$res_res_moleculelist_unique_len} {
                 set res_unique_number_id [lindex $res_res_moleculelist_unique $res_unique_number]
