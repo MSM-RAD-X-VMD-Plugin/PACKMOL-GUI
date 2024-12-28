@@ -34,11 +34,17 @@ _**Note**_: If Windows users place packmol1.0 in another folder with spaces, ple
 For example, "lappend auto_path C:/Program Files/packmol1.0" should be written as “lappend auto_path C:/Program\ Files/packmol1.0”.<br>
 ## 2.2 Automated Installation <br>
 We offer automated installation scripts compatible with various operating systems. Users are required to download the "packmol1.0" directory along with the "install.tcl" script. Please adhere to the instructions outlined below to successfully complete the automated installation process.<br>
-1. Launch VMD. <br>
-2. Access the directory containing the install.tcl script either through the VMD command-line interface or by navigating to VMD Main -> Extensions -> Tk Console. <br>
-3. Execute the script by entering the command: **play install.tcl**. <br>
-4. When prompted, supply the path to the packmol1.0 directory. <br>
-5. The installation process will then be completed. And please, re-launch VMD. <br>
+1.	Download "packmol1.0" and "install.tcl".<br>
+2.	Launch VMD.<br>
+3.	Access the directory containing the install.tcl script either through the VMD command-line interface or by navigating to VMD Main -> Extensions -> Tk Console.<br>
+    Write the following command and press ENTER:<br>
+    cd "COMPLETE PATH OF install.tcl DIRECTORY"<br>
+    Example: cd /home/users/ Downloads/PACKMOL-Download<br>
+4.	Write the following command and press ENTER:<br>
+    play install.tcl.<br>
+5.	When prompted, supply the path to the packmol1.0 directory, <br>
+    such as: /home/users/ Downloads/PACKMOL-Download /packmol1.0.<br>
+6.	The installation process will then be completed. Please, re-launch VMD and open PACKMOL-GUI at VMD Main -> Extensions -> Modeling > PACKMOL.<br>
 _**Note**_: On Linux systems, if the installation is conducted with root privileges, it is necessary for the user to specify the path to the .vmdrc file. Compatibility has been evaluated with Windows versions 7, 10, and 11; macOS Mojave version 10.14 (with the caveat that macOS version 10.15 no longer supports 32-bit applications); and CentOS version 7.0 systems.<br><br>
 **Figure 1.** The interactive and automated procedure for installation.
 ![config-1](https://github.com/MSM-RAD-X-VMD-Plugin/PACKMOL-GUI/blob/main/annotated-recording-examples/install.gif)<br><br>
