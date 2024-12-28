@@ -1,7 +1,7 @@
 Step-by-Step Guide
 ===============
 ## 1. Import SCU-103 and Set Periodic Boundary Conditions
-Import the SCU-103-NO3.pdb molecule using VMD or the "Import" button in the Molecule Loading module. Set the constraint box parameters based on its unit cell parameters: (-28.20, -23.95, -4.10) and (28.20, 23.95, 4.10).
+Import the SCU-103-NO3.pdb molecule using VMD or the "Import" button in the Molecule Loading module. Set the constraint box parameters: (-28.20, -23.95, -4.10) and (28.20, 23.95, 4.10).
 Set the minimum and maximum values for periodic boundary conditions: (-28.20, -23.95, -70) and (28.20, 23.95, 70).<br><br>
 ![case-2-1](https://github.com/MSM-RAD-X-VMD-Plugin/PACKMOL-GUI/blob/main/annotated-recording-examples/Example-2-1.gif)
 ## 2. Load Ions Above SCU-103
